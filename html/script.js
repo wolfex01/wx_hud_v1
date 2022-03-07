@@ -9,7 +9,7 @@ const ShowInterface = () => {
     Status ? $('.hudbox').css('visibility', Show) : $('.hudbox').css('visibility', Hide)
 }
 
-window.addEventListener('message',() => {
+window.addEventListener('message',(event) => {
     var data = event.data
     console.log(data.hunger)
     $('.health').css('width', `${data.health}%`)
